@@ -1,7 +1,7 @@
 'use strict';
 var Hogan = require('hogan.js');
 var conf = {
-    serverHost : ''
+    serverHost : 'http://localhost:8080'
 }
 var _arvin = {
     //网络请求
@@ -11,6 +11,11 @@ var _arvin = {
             type        : param.method  || 'get', //请求方法
             url         : param.url     || '',//url
             dataType    : param.type    || 'json',//json
+            contentType : param.contentType    || 'application/json',
+            xhrFields: {
+                withCredentials: true
+            },
+            //contentType :  'application/x-www-form-urlencoded',
             data        : param.data    || '',//请求是需要的数据
             success     : function (res) {
                 //请求成功
@@ -73,7 +78,7 @@ var _arvin = {
     },
     //统一登录处理
     doLogin : function () {
-        window.location.href = './login.html?redirect=' + encodeURIComponent(window.location.href);
+        window.location.href = './user_login.html?redirect=' + encodeURIComponent(window.location.href);
     },
     goHome : function () {
         window.location.href = './index.html';
