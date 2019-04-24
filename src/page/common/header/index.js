@@ -6,6 +6,7 @@ var _arvin     = require('util/arvin.js');
 // 通用页面头部
 var header = {
     init : function(){
+        this.onLoad();
         this.bindEvent();
     },
     /*回填*/

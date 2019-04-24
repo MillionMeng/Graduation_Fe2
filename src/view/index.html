@@ -7,9 +7,255 @@
 	<body>
 	<%= require('html-loader!./layout/nav.html') %>
 	<%= require('html-loader!./layout/header.html') %>
-	<div class="page-wrap w">
-		<%= require('html-loader!./layout/nav-side.html') %>
-		<div class="content with-nav">test</div>
+	<div class="w">
+		<ul class="keywords-list">
+			<li class="keywords-item">
+				<a class="link" target="_blank" href="./list.html?keyword=手机">手机</a>
+				<a class="link" target="_blank" href="./list.html?keyword=华为">华为</a>
+				<a class="link" target="_blank" href="./list.html?keyword=小米">小米</a>
+				<a class="link" target="_blank" href="./list.html?keyword=苹果">苹果</a>
+				<a class="link" target="_blank" href="./list.html?keyword=魅族">魅族</a>
+			</li>
+			<li class="keywords-item">
+				<a class="link" target="_blank" href="./list.html?keyword=电脑">电脑</a>
+				<a class="link" target="_blank" href="./list.html?keyword=苹果">苹果</a>
+				<a class="link" target="_blank" href="./list.html?keyword=联想">联想</a>
+				<a class="link" target="_blank" href="./list.html?keyword=华硕">华硕</a>
+				<a class="link" target="_blank" href="./list.html?keyword=戴尔">戴尔</a>
+			</li>
+			<li class="keywords-item">
+				<a class="link" target="_blank" href="./list.html?keyword=电视">电视</a>
+				<a class="link" target="_blank" href="./list.html?keyword=三星">三星</a>
+				<a class="link" target="_blank" href="./list.html?keyword=小米">小米</a>
+				<a class="link" target="_blank" href="./list.html?keyword=索尼">索尼</a>
+			</li>
+			<li class="keywords-item">
+				<a class="link" target="_blank" href="./list.html?keyword=家电">家电</a>
+				<a class="link" target="_blank" href="./list.html?keyword=冰箱">冰箱</a>
+				<a class="link" target="_blank" href="./list.html?keyword=空调">空调</a>
+				<a class="link" target="_blank" href="./list.html?keyword=洗衣机">洗衣机</a>
+			</li>
+			<li class="keywords-item">
+				<a class="link" target="_blank" href="./list.html?keyword=厨房卫浴">厨房卫浴</a>
+				<a class="link" target="_blank" href="./list.html?keyword=厨具刀具">厨具刀具</a>
+				<a class="link" target="_blank" href="./list.html?keyword=清洁用具">清洁用具</a>
+			</li>
+			<li class="keywords-item">
+				<a class="link" target="_blank" href="./list.html?keyword=家居办公">家居办公</a>
+				<a class="link" target="_blank" href="./list.html?keyword=生活用品">生活用品</a>
+				<a class="link" target="_blank" href="./list.html?keyword=汽车装饰">汽车装饰</a>
+			</li>
+			<li class="keywords-item">
+				<a class="link" target="_blank" href="./list.html?keyword=服饰">服饰</a>
+				<a class="link" target="_blank" href="./list.html?keyword=男装">男装</a>
+				<a class="link" target="_blank" href="./list.html?keyword=女装">女装</a>
+				<a class="link" target="_blank" href="./list.html?keyword=鞋靴">鞋靴</a>
+			</li>
+			<li class="keywords-item">
+				<a class="link" target="_blank" href="./list.html?keyword=美妆">美妆</a>
+				<a class="link" target="_blank" href="./list.html?keyword=化妆品">化妆品</a>
+				<a class="link" target="_blank" href="./list.html?keyword=男士护肤">男士护肤</a>
+			</li>
+			<li class="keywords-item">
+				<a class="link" target="_blank" href="./list.html?keyword=母婴">母婴</a>
+				<a class="link" target="_blank" href="./list.html?keyword=奶粉">奶粉</a>
+				<a class="link" target="_blank" href="./list.html?keyword=尿裤湿巾">尿裤湿巾</a>
+			</li>
+			<li class="keywords-item">
+				<a class="link" target="_blank" href="./list.html?keyword=图书">图书</a>
+				<a class="link" target="_blank" href="./list.html?keyword=文艺">文艺</a>
+				<a class="link" target="_blank" href="./list.html?keyword=科幻">科幻</a>
+				<a class="link" target="_blank" href="./list.html?keyword=少儿">少儿</a>
+			</li>
+		</ul>
+		<div class="banner-con">
+			<div class="loading"></div>
+		</div>
+	</div>
+	<div class="w">
+		<div class="floor-wrap">
+			<h1 class="floor-title">F1 家用电器</h1>
+			<ul class="floor-list">
+				<li class="floor-item">
+					<a href="./list.html?categoryId=10006">
+						<span class="floor-text">双开门冰箱</span>
+						<img class="floor-img" src="<%= require('../image/floor/floor1-1.jpg')%>" alt="双开门冰箱"/>
+					</a>
+				</li>
+				<li class="floor-item">
+					<a href="./list.html?categoryId=10007">
+						<span class="floor-text">电视</span>
+						<img class="floor-img" src="<%= require('../image/floor/floor1-2.jpg')%>" alt="双开门冰箱"/>
+					</a>
+				</li>
+				<li class="floor-item">
+					<a href="./list.html?categoryId=10008">
+						<span class="floor-text">洗衣机</span>
+						<img class="floor-img" src="<%= require('../image/floor/floor1-3.jpg')%>" alt="双开门冰箱"/>
+					</a>
+				</li>
+				<li class="floor-item">
+					<a href="./list.html?categoryId=10009">
+						<span class="floor-text">空调</span>
+						<img class="floor-img" src="<%= require('../image/floor/floor1-4.jpg')%>" alt="双开门冰箱"/>
+					</a>
+				</li>
+				<li class="floor-item">
+					<a href="./list.html?categoryId=10010">
+						<span class="floor-text">热水器</span>
+						<img class="floor-img" src="<%= require('../image/floor/floor1-5.jpg')%>" alt="双开门冰箱"/>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="w">
+		<div class="floor-wrap">
+			<h1 class="floor-title">F2 数码产品</h1>
+			<ul class="floor-list">
+				<li class="floor-item">
+					<a href="./list.html?categoryId=10011">
+						<span class="floor-text">双开门冰箱</span>
+						<img class="floor-img" src="<%= require('../image/floor/floor2-1.jpg')%>" alt="双开门冰箱"/>
+					</a>
+				</li>
+				<li class="floor-item">
+					<a href="./list.html?categoryId=10012">
+						<span class="floor-text">电视</span>
+						<img class="floor-img" src="<%= require('../image/floor/floor2-2.jpg')%>" alt="双开门冰箱"/>
+					</a>
+				</li>
+				<li class="floor-item">
+					<a href="./list.html?categoryId=10013">
+						<span class="floor-text">洗衣机</span>
+						<img class="floor-img" src="<%= require('../image/floor/floor2-3.jpg')%>" alt="双开门冰箱"/>
+					</a>
+				</li>
+				<li class="floor-item">
+					<a href="./list.html?categoryId=10014">
+						<span class="floor-text">空调</span>
+						<img class="floor-img" src="<%= require('../image/floor/floor2-4.jpg')%>" alt="双开门冰箱"/>
+					</a>
+				</li>
+				<li class="floor-item">
+					<a href="./list.html?categoryId=10015">
+						<span class="floor-text">热水器</span>
+						<img class="floor-img" src="<%= require('../image/floor/floor2-5.jpg')%>" alt="双开门冰箱"/>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="w">
+		<div class="floor-wrap">
+			<h1 class="floor-title">F3 箱包服饰</h1>
+			<ul class="floor-list">
+				<li class="floor-item">
+					<a href="./list.html?categoryId=10016">
+						<span class="floor-text">双开门冰箱</span>
+						<img class="floor-img" src="<%= require('../image/floor/floor3-1.jpg')%>" alt="双开门冰箱"/>
+					</a>
+				</li>
+				<li class="floor-item">
+					<a href="./list.html?categoryId=10017">
+						<span class="floor-text">电视</span>
+						<img class="floor-img" src="<%= require('../image/floor/floor3-2.jpg')%>" alt="双开门冰箱"/>
+					</a>
+				</li>
+				<li class="floor-item">
+					<a href="./list.html?categoryId=10018">
+						<span class="floor-text">洗衣机</span>
+						<img class="floor-img" src="<%= require('../image/floor/floor3-3.jpg')%>" alt="双开门冰箱"/>
+					</a>
+				</li>
+				<li class="floor-item">
+					<a href="./list.html?categoryId=10019">
+						<span class="floor-text">空调</span>
+						<img class="floor-img" src="<%= require('../image/floor/floor3-4.jpg')%>" alt="双开门冰箱"/>
+					</a>
+				</li>
+				<li class="floor-item">
+					<a href="./list.html?categoryId=10020">
+						<span class="floor-text">热水器</span>
+						<img class="floor-img" src="<%= require('../image/floor/floor3-5.jpg')%>" alt="双开门冰箱"/>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="w">
+		<div class="floor-wrap">
+			<h1 class="floor-title">F4 最爱零食</h1>
+			<ul class="floor-list">
+				<li class="floor-item">
+					<a href="./list.html?categoryId=10021">
+						<span class="floor-text">双开门冰箱</span>
+						<img class="floor-img" src="<%= require('../image/floor/floor4-1.jpg')%>" alt="双开门冰箱"/>
+					</a>
+				</li>
+				<li class="floor-item">
+					<a href="./list.html?categoryId=10022">
+						<span class="floor-text">电视</span>
+						<img class="floor-img" src="<%= require('../image/floor/floor4-2.jpg')%>" alt="双开门冰箱"/>
+					</a>
+				</li>
+				<li class="floor-item">
+					<a href="./list.html?categoryId=10023">
+						<span class="floor-text">洗衣机</span>
+						<img class="floor-img" src="<%= require('../image/floor/floor4-3.jpg')%>" alt="双开门冰箱"/>
+					</a>
+				</li>
+				<li class="floor-item">
+					<a href="./list.html?categoryId=10024">
+						<span class="floor-text">空调</span>
+						<img class="floor-img" src="<%= require('../image/floor/floor4-4.jpg')%>" alt="双开门冰箱"/>
+					</a>
+				</li>
+				<li class="floor-item">
+					<a href="./list.html?categoryId=10025">
+						<span class="floor-text">热水器</span>
+						<img class="floor-img" src="<%= require('../image/floor/floor4-5.jpg')%>" alt="双开门冰箱"/>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="w">
+		<div class="floor-wrap">
+			<h1 class="floor-title">F5 饮料专区</h1>
+			<ul class="floor-list">
+				<li class="floor-item">
+					<a href="./list.html?categoryId=10026">
+						<span class="floor-text">双开门冰箱</span>
+						<img class="floor-img" src="<%= require('../image/floor/floor5-1.jpg')%>" alt="双开门冰箱"/>
+					</a>
+				</li>
+				<li class="floor-item">
+					<a href="./list.html?categoryId=10027">
+						<span class="floor-text">电视</span>
+						<img class="floor-img" src="<%= require('../image/floor/floor5-2.jpg')%>" alt="双开门冰箱"/>
+					</a>
+				</li>
+				<li class="floor-item">
+					<a href="./list.html?categoryId=10028">
+						<span class="floor-text">洗衣机</span>
+						<img class="floor-img" src="<%= require('../image/floor/floor5-3.jpg')%>" alt="双开门冰箱"/>
+					</a>
+				</li>
+				<li class="floor-item">
+					<a href="./list.html?categoryId=10029">
+						<span class="floor-text">空调</span>
+						<img class="floor-img" src="<%= require('../image/floor/floor5-4.jpg')%>" alt="双开门冰箱"/>
+					</a>
+				</li>
+				<li class="floor-item">
+					<a href="./list.html?categoryId=10030">
+						<span class="floor-text">热水器</span>
+						<img class="floor-img" src="<%= require('../image/floor/floor5-5.jpg')%>" alt="双开门冰箱"/>
+					</a>
+				</li>
+			</ul>
+		</div>
 	</div>
 	<%= require('html-loader!./layout/footer.html') %>
 	</body>
