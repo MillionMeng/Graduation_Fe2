@@ -12,6 +12,7 @@ var getHtmlConfig = function (name,title) {
         //目标文件位置
         filename : 'view/'+name+'.html',
         title    : title,
+        favicon  : './ibuy32.ico',
         inject   : true,
         hash     : true,
         chunks   : ['common',name]

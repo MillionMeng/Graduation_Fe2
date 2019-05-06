@@ -1,31 +1,80 @@
 /* 通用头部导航 */
 .header .logo{
     position: absolute;
-    left: 60px;
-    top: 34px;
+    left: 140px;
+    top: 20px;
     display: block;
-    font-size: 36px;
-    color: #c60023;
+    font-size: 43px;
+    /* color: #c60023; */
+    color: #fa2a83;
     font-weight: bold;
     text-decoration: none;
 }
+.header .arvin_logo1{
+    font-size: 10px;
+}
+
 
 .header .search-con{
     padding: 40px 0 30px 250px;
+    margin-bottom: 20px;
+    /*position: absolute;
+    top: 0;
+    right: -2px;
+    z-index: 2;
+    cursor: pointer;
+    border: medium none;
+    color: #fff;
+    height: 35px;
+    width: 76px;
+    font-size: 18px;
+    line-height: 33px;*/
 }
 .header .search-con .search-input{
-    width: 550px;
+   /* width: 550px;
     height: 40px;
     line-height: 40px;
     padding-left: 10px;
     font-size: 15px;
-    border: 2px solid #c60023;
-    outline: none;
+    border: 2px solid #fa2a83;
+    outline: none;*/
+    width: 494px;
+    top:-16px;
+    left: 165px;
+    height: 35px;
+    margin-top: 19px;
+    border: 2px solid #fa2a83;
+    z-index: 6;
+    position: relative;
+    border-radius: 20px;
+
 }
-.header .search-con .search-btn{
+#arvin_search{
     position: absolute;
+    top: 56px;
+    left: 431px;
+    font-size: 13px;
+    color: #999;
+    z-index: 8;
+}
+
+.header .search-con .search-btn{
+    /*position: absolute;
     height: 44px;
-    width: 80px;
+    width: 80px;*/
+    position: absolute;
+    top: 43px;
+    right: 115px;
+    z-index: 999;
+    cursor: pointer;
+    border: medium none;
+    color: #fff;
+    height: 39px;
+    width: 76px;
+    font-size: 18px;
+    line-height: 33px;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
 }
 
 /* 面包屑导航 */

@@ -63,7 +63,8 @@ input[type='checkbox']{
     line-height: 40px;
     vertical-align: middle; /*防止其他样式冲突*/
     border: none;
-    background: #c60023;
+   /* background: #c60023;*/
+    background: #fa2a83;
     font-size: 17px;
     font-weight: bold;
     color: #fff;
@@ -105,3 +106,5 @@ input[type='checkbox']{
     padding: 10px;
     overflow: hidden;
 }
+
+

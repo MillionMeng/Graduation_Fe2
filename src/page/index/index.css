@@ -1,10 +1,77 @@
+.index-background{
+    background: url("/src/image/index_backgroud001.jpg");
+}
+
+.arvin_font{
+    margin-top: 15px;
+    width: 240px;
+    height: 40px;
+    font-size: 22px;
+    /*color: #fa2a83;*/
+    position: relative;
+    left: 216px;
+    top: 15px;
+    font-weight: bold;
+
+}
+.arvin-nav{
+    margin: 5px;
+    font-size: 10px;
+    height: 20px;
+}
+.arvin-ul{
+   /* text-align: center;
+    position: relative;
+    left: 220px;*/
+    margin-left: 375px;
+ }
+
+.arvin-li{
+    float: left;
+    margin-left: 80px;
+    font-size: 15px;
+}
+
+.imgbox{
+    margin-top: 15px;
+    position: relative;
+    width: 240px;
+    height: 240px;
+}
+
+
+.imgbox img{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 220px;
+    right: 0;
+    margin: auto;
+    width: 1071px;
+    height: 230px;
+}
+/*.floor_arvin .floor_arvin1{
+    width: 1030px;
+    float:left;
+    height: 370px;
+}
+
+.floor_arvin .floor_down{
+    position: relative;
+    width: 200px;
+    height: 220px;
+    margin: 15px 20px 15px 0;
+    float: left;
+    cursor: pointer;
+}*/
+
 /* keywords-list */
 .keywords-list{
     float: left;
     width: 240px;
     height: 350px;
     padding: 10px 0;
-    margin-right: 10px;
+    /*margin-right: 10px;*/
     background: #666;
     color: #fff;
 }
