@@ -87,3 +87,53 @@
     font-size: 14px;
     border-top: 2px solid #c60023;
 }
+
+
+
+
+.arvin_fen_class{
+    /* float: left;*/
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    width: 240px;
+    float: left;
+    height: 36px;
+    color: #fff;
+    background-color: #fa2a83;
+    position: absolute;
+    z-index: 100;
+    margin-top: -6px;
+    line-height: 36px;
+    left: 220px;
+}
+.arvin_fen_class1{
+    left:5px;
+}
+.arvin-nav{
+    margin: 5px;
+    font-size: 10px;
+    height: 20px;
+    cursor: pointer;
+}
+.arvin-ul{
+    /* text-align: center;
+     position: relative;
+     left: 220px;*/
+    margin-left: 440px;
+}
+
+.arvin-li{
+    text-decoration:none;
+    padding: 0 0px 0 5px;
+    float: left;
+    margin-left: 80px;
+    font-size: 15px;
+}
+
+.arvin-li a{
+    text-decoration:none;
+    font-weight: bold;
+    color:black;
+    margin-bottom: 3px;
+}

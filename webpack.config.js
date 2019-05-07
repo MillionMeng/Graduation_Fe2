@@ -37,6 +37,8 @@ var config = {
         'user-center-update'    : ['./src/page/user-center-update/index.js'],
         'user-pass-update'      : ['./src/page/user-pass-update/index.js'],
         'result'                : ['./src/page/result/index.js'],
+        'about'                 : ['./src/page/about/index.js'],
+        'address'                 : ['./src/page/address/index.js'],
     },
     output:{
         path: './dist', //目标文件要放的位置
@@ -86,6 +88,8 @@ var config = {
         new HtmlWebpackPlugin(getHtmlConfig('user-center-update','修改个人信息')),
         new HtmlWebpackPlugin(getHtmlConfig('user-pass-update','修改密码')),
         new HtmlWebpackPlugin(getHtmlConfig('result','操作结果')),
+        new HtmlWebpackPlugin(getHtmlConfig('about','关于IBuy')),
+        new HtmlWebpackPlugin(getHtmlConfig('address','收货地址')),
     ]
 };
 

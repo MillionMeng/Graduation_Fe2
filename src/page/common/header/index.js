@@ -36,7 +36,7 @@ var header = {
     searchSubmit : function () {
         var keyword = $.trim($('#search-input').val());
         if(keyword){
-            window.location.href = './list.htm?keyword=' + keyword;
+            window.location.href = './list.html?keyword=' + keyword;
         }
         //如果keyword为空，直接返回首页
         else {

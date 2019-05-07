@@ -48,7 +48,7 @@ input[type='checkbox']{
 }
 /*链接做一些动作 比如鼠标放上去变颜色*/
 .link:hover{
-    color: #e80012;
+    color: #fa2a83;
 }
 /*长得像link 但不希望它能点 */
 .link-text{

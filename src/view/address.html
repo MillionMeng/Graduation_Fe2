@@ -12,14 +12,46 @@
 		<div class="crumb-con">
 			<a class="link" href="./index.html">IBuy</a>
 			<span></span>
-			<span class="link-text"><%= htmlWebpackPlugin.options.title%><!--个人中心--></span>
+			<span class="link-text"><%= htmlWebpackPlugin.options.title%></span>
 		</div>
 	</div>
 </div>
+
+
 <div class="page-wrap w">
 	<%= require('html-loader!./layout/nav-side.html') %>
 	<div class="content with-nav">
+		<div class="panel">
+			<h1 class="panel-title">
+				收货地址
+				<button class="add-address ">
+					<i class="fa fa-plus"></i>
+					新建地址
+				</button>
+			</h1>
 
+
+
+			<div class="panel-body address-com">
+
+
+
+			</div>
+
+
+
+			<div class="panel-body">
+				<div class="arvin-address">
+
+					<i class="fa fa-plus"></i>
+					<div class="text">新建地址</div>
+
+				</div>
+
+			</div>
+
+
+		</div>
 	</div>
 </div>
 <%= require('html-loader!./layout/footer.html') %>

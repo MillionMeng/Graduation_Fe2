@@ -12,15 +12,30 @@
 		<div class="crumb-con">
 			<a class="link" href="./index.html">IBuy</a>
 			<span></span>
-			<span class="link-text"><%= htmlWebpackPlugin.options.title%><!--个人中心--></span>
+			<span class="link-text"><%= htmlWebpackPlugin.options.title%></span>
 		</div>
 	</div>
 </div>
+
+
 <div class="page-wrap w">
 	<%= require('html-loader!./layout/nav-side.html') %>
 	<div class="content with-nav">
-
+		<div class="panel">
+			<h1 class="panel-title">关于IBuy</h1>
+			<div class="panel-body">
+				<div class="about">
+					欢迎进入IBuy<br>
+					毕设题目:《基于SSM的生活用品购物平台》<br>
+					姓&nbsp;&nbsp;名：孟祥宇<br>
+					班&nbsp;&nbsp;级：软件15-2<br>
+					学&nbsp;&nbsp;号：1530090220<br>
+					指导教师：刘丕娥<br>
+				</div>
+			</div>
+		</div>
 	</div>
+</div>
 </div>
 <%= require('html-loader!./layout/footer.html') %>
 </body>

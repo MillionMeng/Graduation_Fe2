@@ -1,11 +1,13 @@
 .nav{
     background: #eee;
-    height: 30px;
+    height: 35px;
     line-height: 30px;
 }
 /*用户部分*/
 .nav .user{
     float:left;
+    margin-top: 2px;
+    font-size: 13px;
 }
 .nav .user.login{
     display: none;
@@ -16,8 +18,14 @@
 /*导航连接部分.*/
 .nav .nav-list{
     float: right;
+    margin-top: 2px;
+    font-size: 13px;
 }
 .nav .nav-list .nav-item{
     display: inline-block;
     margin-right: 5px;
+}
+.welcome{
+    color: #999;
+    margin-right: 10px;
 }

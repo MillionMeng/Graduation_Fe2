@@ -10,9 +10,10 @@ var navSide = {
         name : '',
         navList : [
             {name: 'user-center',  desc: '个人中心'    ,href :'./user-center.html'},
+            {name: 'user-address',  desc: '收货地址'    ,href :'./address.html'},
             {name: 'order-list',   desc: '我的订单'    ,href :'./order-list.html'},
             {name: 'user-pass-update',  desc: '修改密码'    ,href :'./user-pass-update.html'},
-            {name: 'about',        desc: '关于MMall'   ,href :'./about.html'}
+            {name: 'about',        desc: '关于IBuy'   ,href :'./about.html'}
         ]
     },
     init : function(option){

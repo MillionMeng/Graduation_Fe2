@@ -1,0 +1,74 @@
+.arvin-address{
+    width: 848px;
+    height: 100px;
+    padding: 10px;
+    position: relative;
+    border:2px solid #fde9e9;
+    z-index: 1;
+}
+.arvin-text{
+    margin: 10px;
+    width: 600px;
+    position: absolute;
+}
+.address-op{
+    background: #fde9e9;
+    width: 170px;
+    height: 124px;
+    text-align: center;
+    line-height: 11;
+    margin-left: 700px;
+    margin-top: -124px;
+    z-index: 10;
+    position: absolute;
+}
+.address-name{
+    font-weight: bold;
+    font-size: 18px;
+}
+.address-name em{
+    color: #999;
+    font-size: 12px;
+    /*font-family: SimSun;
+    font-weight: normal;*/
+}
+.address-detail{
+    margin-top: 4px;
+    font-size: 13px;
+}
+.address-phone{
+    margin-top: 4px;
+    font-size: 13px;
+}
+.add-address{
+    float: right;
+    margin-right: 92px;
+    width: 94px;
+    height: 28px;
+    line-height: 26px;
+    display: inline-block;
+    text-align: center;
+    color: #555;
+    text-decoration: none;
+    float: right;
+}
+.arvin-address .fa{
+    line-height: 108px;
+    font-size: 40px;
+    margin-left: 342px;
+    color: #999;
+}
+.add-new_address{
+    background: #333333;
+}
+.arvin-address .text{
+    position: relative;
+    font-size: 21px;
+    height: 25px;
+    margin-left: 389px;
+    top: -72px;
+    color: #999;
+}
+.address-com{
+
+}

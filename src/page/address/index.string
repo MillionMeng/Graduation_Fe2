@@ -1,0 +1,17 @@
+{{#list}}
+<div class="arvin-address" data-id={{id}}>
+
+	<div class="arvin-text">
+		<div class="address-name">{{receiverName}}<em>&nbsp;收</em></div>
+		<div class="address-detail">{{receiverProvince}} {{receiverCity}} {{receiverDistrict}}  {{receiverAddress}}</div>
+		<div class="address-phone">{{receiverPhone}}</div>
+	</div>
+
+</div>
+
+<div class="address-op">
+	<span class="link address-update1">编辑</span>
+	<span class="link address-del">删除</span>
+</div>
+<br>
+{{/list}}
