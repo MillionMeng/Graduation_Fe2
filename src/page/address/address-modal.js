@@ -1,37 +1,38 @@
 'use strict';
 
-
 var _arvin                  = require('util/arvin.js');
 var _address                = require('service/address-service.js');
 var _cities                 = require('util/cities/index.js');
 var templateAddressModal    = require('./address-modal.string');
 
 var addressModal = {
-    show : function (option) {
-        //对象赋值 option 的绑定
-        this.option         = option;
-        this.option.data    = option.data || {}; //在取值时，不会报错
-        this.$modalWrap     = $('.modal-wrap');
-        //渲染页面
+    show: function (option) {
+        /*第一步option赋值  option 的绑定*/
+        this.option = option;
+        this.option.data = option.data || {};
+        this.$modalWrap = $('.modal-wrap');
+        /*二 渲染页面*/
         this.loadModal();
-        //绑定事件
+        /*三 绑定事件*/
         this.bindEvent();
     },
     bindEvent : function () {
-        var _this =this;
+        var _this= this;
         //省份和城市的二级联动
         this.$modalWrap.find('#receiver-province').change(function () {
             var selectedProvince = $(this).val();
-            _this.loadCities(selectedProvince);
+            _this.loadCity(selectedProvince);
         });
+
         //提交收货地址
         this.$modalWrap.find('.address-btn').click(function () {
-            var receiverInfo = _this.getReceiverInfo(),
+            var receiverInfo = _this.getReceiverInfo1(),
                 isUpdate     = _this.option.isUpdate;
-            //使用新地址，且验证通过
+            console.log(isUpdate,receiverInfo.status);
+            //使用新地址。切验证通过
             if(!isUpdate && receiverInfo.status){
                 _address.save(receiverInfo.data,function (res) {
-                    _arvin.successTips('新增地址成功');
+                    _arvin.successTips('新建地址成功');
                     _this.hide();
                     //执行回调函数
                     typeof _this.option.onSuccess() === 'function'  && _this.option.onSuccess(res);
@@ -39,7 +40,7 @@ var addressModal = {
                     _arvin.errorTips(errMsg);
                 });
             }
-            //更新收件人地址，并且验证通过
+            //更新地址
             else if(isUpdate && receiverInfo.status){
                 _address.updateAddress(receiverInfo.data,function (res) {
                     _arvin.successTips('修改地址成功');
@@ -50,15 +51,10 @@ var addressModal = {
                 });
 
             }
-            //验证不通过
-            else{
-                _arvin.errorTips(receiverInfo.errMsg  || '哎呀，哪里出错了？？？')
+            //验证失败
+            else {
+                _arvin.errorTips(receiverInfo.errMsg || '新建地址失败~ 好难过');
             }
-
-        });
-        //保证点击modal内容区的时候吗，不关闭弹窗
-        this.$modalWrap.find('.modal-container').click(function(e){
-           e.stopPropagation();
         });
         //点x 或蒙版区域关闭弹窗
         this.$modalWrap.find('.close').click(function(){
@@ -66,7 +62,7 @@ var addressModal = {
         });
     },
     loadModal : function () {
-        var addressModalHtml = _arvin.renderHtml(templateAddressModal,/*this.option.data  改成对象*/{
+        var addressModalHtml = _arvin.renderHtml(templateAddressModal,{
             isUpdate : this.option.isUpdate,
             data     : this.option.data    //用来回填
         });
@@ -74,32 +70,42 @@ var addressModal = {
         //加载省份
         this.loadProvince();
         /*//加载城市
-        this.loadCities();*/  //不在这写
+        this.loadCity();*/
     },
-    //加载省份
-    loadProvince : function () {
-        var provinces = _cities.getProvinces() || [],
-            $provincesSelect = this.$modalWrap.find('#receiver-province');
-        $provincesSelect.html(this.getSelection(provinces));
-        //如果是更新地址，并且有省份信息，做省份回填
-        if(this.option.isUpdate && this.option.data.receiverProvince){
-            $provincesSelect.val(this.option.data.receiverProvince);
-            this.loadCities(this.option.data.receiverProvince);
-        }
-    },
-    //加载城市信息
-    loadCities : function (provinceName) {
-        console.log(provinceName);
+    //加载城市
+    loadCity : function (provinceName) {
         var cities = _cities.getCities(provinceName) || [],
             $citySelect = this.$modalWrap.find('#receiver-city');
+        console.log(cities);
+
         $citySelect.html(this.getSelection(cities));
+
         //如果是更新地址，并且有省份信息，做城市的回填
         if(this.option.isUpdate && this.option.data.receiverCity){
             $citySelect.val(this.option.data.receiverCity);
         }
     },
+    //加载省份
+    loadProvince : function(){
+        var province       =_cities.getProvinces() || [],
+            $provinceSelect = this.$modalWrap.find('#receiver-province');
+        $provinceSelect.html(this.getSelection(province));
+        //如果是更新地址，并且有省份信息，做省份回填
+        if(this.option.isUpdate && this.option.data.receiverProvince){
+            $provinceSelect.val(this.option.data.receiverProvince);
+            this.loadCity(this.option.data.receiverProvince);
+        }
+    },
+    //获取选择宽option的选项,输入array,输出HTML
+    getSelection :function (optionArray) {
+        var html = '<option value="">请选择</option>>';
+        for(var i = 0,length = optionArray.length; i < length; i++){
+            html +='<option value="' + optionArray[i] + '">' + optionArray[i] + '</option>>';
+        }
+        return html;
+    },
     //获取表单里收件人信息的方法,并做表单的验证
-    getReceiverInfo : function () {
+    getReceiverInfo1 : function () {
         var receiverInfo    = {},
             result          ={
                 status : false
@@ -121,10 +127,10 @@ var addressModal = {
             result.errMsg = '请选择收件人所在省份';
         }else if(!receiverInfo.receiverCity){
             result.errMsg = '请选择收件人所在城市';
-        }else if(!receiverInfo.receiverPhone){
-            result.errMsg = '请输入收件人手机号';
         }else if(!receiverInfo.receiverAddress){
             result.errMsg = '请输入收件人详细地址';
+        }else if(!receiverInfo.receiverPhone){
+            result.errMsg = '请输入收件人手机号';
         }
         //所有验证全部通过
         else {
@@ -132,18 +138,11 @@ var addressModal = {
             result.data     = receiverInfo;
         }
         return result;
-     },
-    //获取select框中的选项，输入是一个数组：array  输出是html ： HTML
-    getSelection : function (optionArray) {
-        var html = '<option value="">请选择</option>>';
-        for(var i = 0,length = optionArray.length; i < length; i++){
-            html +='<option value="' + optionArray[i] + '">' + optionArray[i] + '</option>>';
-        }
-        return html;
     },
     //关闭弹窗
     hide : function () {
         this.$modalWrap.empty();
     }
-};
+}
+
 module.exports = addressModal;

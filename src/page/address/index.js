@@ -7,7 +7,7 @@ var _arvin          = require('util/arvin.js');
 var _order          = require('service/order-service.js');
 var _address        = require('service/address-service.js');
 var templateAddress = require('./index.string');
-var addressModal    = require('../order-confirm/address-modal.js');
+var addressModal    = require('./address-modal');
 
 var page = {
     data : {
@@ -25,7 +25,69 @@ var page = {
         this.loadAddressList();
     },
     bindEvent : function(){
+        var _this = this;
+        //新建地址
+        $(document).on('click','.arvin-address',function () {
+            addressModal.show({
+                isUpdate : false,
+                onSuccess : function () {
+                    _this.loadAddressList();
+                }
+            });
+        });
 
+        //按钮新建地址
+        $('#new-address-btn').click(function () {
+            addressModal.show({
+                isUpdate : false,
+                onSuccess : function () {
+                    _this.loadAddressList();
+                }
+            });
+        });
+
+
+        //编辑收货地址
+        $(document).on('click','.address-update1',function (e) {
+            //阻止向上冒泡
+            e.stopPropagation();
+            var addressId =  $(this).parents('.arvin-address').data('id'); ;
+           console.log(addressId);
+
+
+            //先读取信息
+            _address.getAddress(addressId,function (res) {
+                addressModal.show({
+                    isUpdate    : true,
+                    data    : res,
+                    onSuccess   : function () {
+                        _this.loadAddressList();
+                    }
+                });
+            },function (errMsg) {
+                _arvin.errorTips(errMsg);
+            });
+            addressModal.show({
+                isUpdate : false,
+                onSuccess : function () {
+                    _this.loadAddressList();
+                }
+            });
+        });
+
+        //删除地址
+        $(document).on('click','.address-del',function (e) {
+            //阻止向上冒泡
+            e.stopPropagation();
+            var addressId = $(this).parents('.arvin-address').data('id');
+            if(window.confirm('是否删除改地址？')){
+                _address.deleteAddress(addressId,function (res) {
+                    _this.loadAddressList();
+                },function (errMsg) {
+                    _arvin.errorTips(errMsg);
+                });
+            }
+        });
     },
     // 加载地址列表
     loadAddressList : function(){
@@ -39,7 +101,7 @@ var page = {
         },function (errMsg) {
             $(".address-com").html('<p class="err-tip">地址加载失败，请重试</p>');
         })
-    }
+    },
 }
 
 $(function () {

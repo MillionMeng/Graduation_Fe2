@@ -18,7 +18,7 @@
     text-align: center;
     line-height: 11;
     margin-left: 700px;
-    margin-top: -124px;
+    margin-top: -12px;
     z-index: 10;
     position: absolute;
 }
@@ -57,6 +57,7 @@
     font-size: 40px;
     margin-left: 342px;
     color: #999;
+    cursor: pointer;
 }
 .add-new_address{
     background: #333333;
@@ -68,7 +69,86 @@
     margin-left: 389px;
     top: -72px;
     color: #999;
+    cursor: pointer;
 }
 .address-com{
 
+}
+
+
+
+/*modal部分*/
+
+
+.modal{
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background: #eee;
+    background: rgba(0,0,0,.4);
+    z-index:1000;
+    overflow: hidden;
+    overflow: auto;
+}
+.modal .modal-container{
+    width: 700px;
+    margin: 50px auto;
+    background: #fff;
+    border-radius: 2px;
+}
+.modal .modal-container .modal-header{
+    position: relative;
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+.modal .modal-container .modal-header .modal-title{
+    font-size:14px;
+
+}
+.modal .modal-container .modal-header .close{
+    position: absolute;
+    padding: 10px;
+    right:20px;
+    top:10px;
+    cursor: pointer;
+}
+
+.modal .modal-container .modal-body{
+    padding: 15px;
+}
+
+/*form部分*/
+
+.form .form-line{
+    margin:5px 0;
+    overflow: hidden;
+}
+.form .form-line .label{
+    display: block;
+    float: left;
+    width:85px;
+    text-align: right;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 10px;
+    cursor:pointer;
+}
+.form .form-line .label .required{
+    color:#fa2a83;
+}
+
+.form .form-line .form-item{
+    padding: 0 5px;
+    height: 30px;
+    line-height: 30px;
+    outline:none;
+    margin-right: 10px;
+}
+.form .form-line .btn{
+    margin-left: 95px;
+    height: 30px;
+    line-height:30px;
+    font-size:13px;
 }

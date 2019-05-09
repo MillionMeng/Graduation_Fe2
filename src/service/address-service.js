@@ -4,7 +4,7 @@ var _arvin = require('util/arvin.js');
 
 var _address = {
 
-    // 添加到购物车
+    // 新建收获地址
     save : function(receiverInfo, resolve, reject){
         _arvin.request({
             url     : _arvin.getServerUrl('/address/add'),

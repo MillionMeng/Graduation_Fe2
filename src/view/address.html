@@ -24,21 +24,17 @@
 		<div class="panel">
 			<h1 class="panel-title">
 				收货地址
-				<button class="add-address ">
+				<!--新建地址按钮-->
+				<button class="add-address" id="new-address-btn">
 					<i class="fa fa-plus"></i>
 					新建地址
 				</button>
 			</h1>
 
-
-
 			<div class="panel-body address-com">
-
-
+				<!--地址列表-->
 
 			</div>
-
-
 
 			<div class="panel-body">
 				<div class="arvin-address">
@@ -53,6 +49,11 @@
 
 		</div>
 	</div>
+</div>
+
+<div class="modal-wrap">
+	<!--新建地址弹框-->
+
 </div>
 <%= require('html-loader!./layout/footer.html') %>
 </body>
