@@ -4,10 +4,13 @@
 require('./index.css');
 require('page/common/nav/index.js');
 require('page/common/header/index.js');
-var _arvin             = require('util/arvin.js');
+var _arvin          = require('util/arvin.js');
 var _product        = require('service/product-service.js');
+var _comment        = require('service/comment-service.js');
 var _cart           = require('service/cart-service.js');
+var commentModal    = require('./comment-modal.js');
 var templateIndex   = require('./index.string');
+var templateComment = require('./comment.string');
 
 var page = {
     data : {
@@ -23,6 +26,7 @@ var page = {
             _arvin.goHome();
         }
         this.loadDetail();
+        this.loadComment();
     },
     bindEvent : function(){
         var _this = this;
@@ -56,6 +60,24 @@ var page = {
                 _arvin.errorTips(errMsg);
             });
         });
+
+        //写评论(添加评论)
+        $(document).on('click','.add-comment', function() {
+            _comment.commentPermission({
+                productId: _this.data.productId
+            },function (res) {
+                commentModal.show({
+                    onSuccess: function () {
+                        _this.loadComment();
+                    }
+                });
+            },function (errMsg) {
+                _arvin.errorTips(errMsg);
+            })
+
+        });
+
+
     },
     // 加载商品详情的数据
     loadDetail : function(){
@@ -73,9 +95,31 @@ var page = {
             html = _arvin.renderHtml(templateIndex, res);
             $pageWrap.html(html);
         }, function(errMsg){
-            $pageWrap.html('<p class="err-tip">此商品太淘气，找不到了</p>');
+            $pageWrap.html('<p class="err-tip">商品太淘气，找不到了</p>');
         });
     },
+    loadComment :function () {
+        var _this           = this,
+            html            = '',
+            $detail_commit  = $('#detail-commit');
+        //加载loading
+        /*$detail_commit.html('<div class="loading"></div>');*/
+        //请求评价列表
+        _comment.getCommentList(this.data.productId,function (res) {
+            /*_this.dataFilter(res);*/
+            html = _arvin.renderHtml(templateComment,res);
+            $detail_commit.html(html);
+        },function (errMsg) {
+            console.log(errMsg);
+            /*html = _arvin.renderHtml(templateComment,errMsg);
+            $('.detail-commit').html(html);*/
+        });
+
+    },
+    /*//数据的适配
+    dataFilter : function (data) {
+        data.notEmpty = !data.res.length;
+    },*/
     // 数据匹配
     filter : function(data){
         data.subImages = data.subImages.split(',');

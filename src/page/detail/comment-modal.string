@@ -1,0 +1,20 @@
+<div class="modal-comment1">
+	<div class="modal-comment2">
+		<div class="add-modal-header">
+			<h1 class="add-comment-title">写评论</h1>
+			<i class="fa fa-close close"></i>
+		</div>
+		<div class="modal-comment-body">
+			<div class="form">
+				<div class="form-line">
+					<label class="label-comment" for="">内容:</label>
+					<input class="form-item-comment" id="comment-content" placeholder="请输入内容"/>
+				</div>
+				<div class="form-line">
+					<a class="btn comment-btn1">提交</a>
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>

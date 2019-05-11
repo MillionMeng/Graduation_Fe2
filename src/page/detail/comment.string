@@ -1,0 +1,56 @@
+<div class="product-comment">
+	<div class="btn comment-btn">用户评价</div>
+
+	<!--第一条评论-->
+	{{#res}}
+	<div class="user-comment">
+		<div class="name-comment">
+			<div class="commit-username">用&nbsp;&nbsp;户 : </div>
+			<div class="commit-username1">{{username}}</div>
+		</div>
+		<div class="content-comment">
+			{{comment}}<!--这件衣服非常好，料子很不错，很喜欢！-->
+		</div>
+		<div class="time-commit">
+			{{createTime}}
+		</div>
+	</div>
+	<hr align="center" width="1080px" />
+	{{/res}}
+
+	<!--&lt;!&ndash;第二条评论&ndash;&gt;
+	<div class="user-comment">
+		<div class="name-comment">
+			<div class="commit-username">用&nbsp;&nbsp;户 : </div>
+			<div class="commit-username1">小百万</div>
+		</div>
+		<div class="content-comment">
+			这件衣服非常好，料子很不错，很喜欢！
+		</div>
+		<div class="time-commit">
+			2019-4-1
+		</div>
+	</div>
+	<hr align="center" width="1000px" />-->
+	<!--暂无评价-->
+	<!--{{^res}}-->
+	<div class="user-comment">
+		<div class="name-comment">
+			<div class="comment-none">{{Msg}}</div>
+		</div>
+	</div>
+	<hr align="center" width="1080px" />
+	<!--{{/res}}-->
+
+	<!--添加评价按钮-->
+	<div class="user-comment">
+		<div class="name-comment">
+			<button class="btn add-comment">
+				<i class="fa fa-plus"></i>
+				写评价
+			</button>
+		</div>
+	</div>
+
+
+</div>

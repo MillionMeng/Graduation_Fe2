@@ -8,13 +8,19 @@ var WEBPACK_ENV         = process.env.WEBPACK_ENV || 'dev';
 //获取html-webpack-pligin参数的方法
 var getHtmlConfig = function (name,title) {
     return {
+        //生成的文件所依赖的html文件模板，模板类型可以使html，jade，ejs等。
         template : './src/view/'+name+'.html',
-        //目标文件位置
+        //目标文件位置 (文件名)
         filename : 'view/'+name+'.html',
+        //文件的标题
         title    : title,
+        //图标
         favicon  : './ibuy32.ico',
+        // true 默认值，script标签位于html文件的 body 底部
         inject   : true,
+        //是否生成hash添加在引入文件地址的末尾，这个可以避免缓存带来的麻烦。默认为true。
         hash     : true,
+        //用于多入口文件，当有多个入口文件，编译后会生成多个打包文件，chunks用来选择使用的js文件
         chunks   : ['common',name]
     };
 };
@@ -45,9 +51,11 @@ var config = {
         publicPath : '/dist',
         filename: 'js/[name].js'//文件名字
     },
+    //外部依赖的声明
     externals : {
         'jquery' : 'window.jQuery'
     },
+    //各种文件，各种loader
     module: {
       loaders:[
           { test: /\.css$/, loader: ExtractTextPlugin.extract("style-loader","css-loader") },
@@ -55,6 +63,7 @@ var config = {
           { test: /\.string$/, loader: 'html-loader'}
       ]
     },
+    //配置别名
     resolve : {
         alias : {
             node_modules    : __dirname + '/node_modules',
@@ -64,6 +73,7 @@ var config = {
             image           : __dirname + '/src/image'
         }
     },
+    //插件
     plugins : [
         //独立通用模块到 js/base.js
         new webpack.optimize.CommonsChunkPlugin({

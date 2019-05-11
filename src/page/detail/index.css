@@ -113,7 +113,7 @@
     background: #eee;
     border: 1px solid #ddd;
     overflow: hidden;
-    border-bottom: 1px solid #c60023;
+    border-bottom: 1px solid #fa2a83;
 }
 .detail-wrap .tab-list .tab-item{
     float: left;
@@ -125,8 +125,24 @@
     cursor: pointer;
 }
 .detail-wrap .tab-list .tab-item.active{
-    background: #c60023;
+    background: #fa2a83;
     color: #fff;
+}
+.detail-wrap .tab-list .tab-comment.active{
+    background: #fa2a83;
+    color: #fff;
+    margin-left: 101px;
+    heigth: 17px;
+    margin-top: 0px;
+    width: 92px;
+    height: 50px;
+    text-align: center;
+    line-height: 51px;
+    font-size: 17px;
+}
+.detail-wrap .tab-list .tab-comment a{
+    text-decoration:none;
+    color: white;
 }
 .detail-wrap .detail-con{
     padding-top: 20px;
@@ -145,4 +161,113 @@
     font-weight: bold;
     text-align: center;
     background: #eee;
+}
+
+
+/*评论*/
+.product-comment{
+    width: 1084px;
+    height: auto;
+    background: white;
+    margin-left: 217px;
+    font-size: 21px;
+}
+.comment-btn{
+    margin-bottom: 5px;
+}
+.user-comment{
+    margin-left: 75px;
+    margin-bottom: 34px;
+    margin-top: 35px;
+}
+.name-comment{
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+.commit-username{
+    font-size: 14px;
+    float: left;
+    font-style: italic;
+    margin-right: 7px;
+    line-height: 33px;
+    font-weigth: bold;
+    color:#aaa;
+}
+.commit-username1{
+    color: #fa2a83;
+    line-height: 30px;
+}
+.commit-content{
+    font-size: 12px;
+    float: left;
+}
+.content-comment{
+    margin-left: 55px;
+    font-size: 13px;
+}
+.time-commit{
+    font-size: 13px;
+    margin-top: 3px;
+}
+.comment-none{
+    color:#fa2a83;
+}
+.add-comment{
+    text-align: center;
+    margin-left: 377px;
+    margin-bottom: 27px;
+}
+
+/*写评论的样式*/
+.modal-comment1{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; /*top bottom left right  都是0 就能全屏覆盖*/
+    background: #eee;
+    background: rgba(0,0,0,.4);
+    z-index: 500;
+    overflow-x : hidden;
+    overflow-y: auto;
+
+}
+.modal-comment2{
+    width: 500px;
+    margin: 200px auto;
+    background: #eee;
+    border-radius: 6px;
+}
+.add-modal-header{
+    position: relative;
+    padding: 10px;
+    border-bottom: 1px solid #fa2a83;
+    font-size: 10px;
+}
+.add-comment-title{
+
+}
+.close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    padding: 8px;
+}
+.modal-comment-body{
+    padding: 10px;
+}
+.label-comment{
+    padding: 5px;
+}
+.form-item-comment{
+    width: 430px;
+    height: 25px;
+}
+.comment-btn1{
+    margin-bottom: -1px;
+    height: 44px;
+    margin-top: 14px;
+    margin-left: 190px;
+    border-radius: 10px;
 }

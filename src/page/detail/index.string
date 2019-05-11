@@ -37,9 +37,15 @@
 	<div class="detail-tab-con">
 		<ul class="tab-list">
 			<li class="tab-item active">详细描述</li>
+			<li class="tab-comment active">
+				<a href="#detail-commit">用户评价</a>
+
+			</li>
+
 		</ul>
 	</div>
 	<div class="detail-con">
 		{{{detail}}}
 	</div>
+	<hr align="center" width="1085" />
 </div>

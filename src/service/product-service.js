@@ -9,7 +9,7 @@ var _product = {
             url     : _arvin.getServerUrl('/productfe/list'),
             //data    : listParam,
             data    : {
-                keyword         : listParam.keyword,
+                keyword         :   listParam.keyword,
                 categoryId      :  listParam.categoryId,
                 pageNum         :  listParam.pageNum,
                 pageSize        :  listParam.pageSize,

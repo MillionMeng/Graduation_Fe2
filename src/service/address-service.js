@@ -38,7 +38,7 @@ var _address = {
             error   : reject
         });
     },
-    //获取地址
+    //更新地址
     updateAddress : function(receiverInfo,resolve, reject){
         _arvin.request({
             url     : _arvin.getServerUrl('/address/update'),

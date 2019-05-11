@@ -17,7 +17,8 @@ var navSide = {
         ]
     },
     init : function(option){
-        //合并选项
+        //合并选项 jquery提供的方法 第二个参数是传进来的option
+        //会把第一个参数里的东西改变  变成第二个参数里的   如果不想改变，在this.option 前加一个空对象 {},
         $.extend(this.option, option);
         this.renderNav();
     },

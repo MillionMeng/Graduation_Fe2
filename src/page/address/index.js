@@ -4,7 +4,6 @@ require('page/common/nav/index.js');
 require('page/common/header/index.js');
 var navSide         = require('page/common/nav-side/index.js');
 var _arvin          = require('util/arvin.js');
-var _order          = require('service/order-service.js');
 var _address        = require('service/address-service.js');
 var templateAddress = require('./index.string');
 var addressModal    = require('./address-modal');
