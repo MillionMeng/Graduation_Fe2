@@ -5,11 +5,11 @@
     width:200px;
     padding:5px 8px;
     float:left;
-    border:3px dashed #ccc;
+    border:3px solid #ccc;
     cursor:pointer;
 }
 .address-item.active{
-    border:3px dashed #c60023;
+    border:3px solid #fa2a83;
 }
 .address-item:hover,
 .address-add:hover{

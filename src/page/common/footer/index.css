@@ -1,6 +1,8 @@
 .footer{
     margin-top: 20px;
     padding-bottom: 10px;
+    border-top: 2px solid #fa2a83;
+    background: #262626;
 }
 .footer .links{
     text-align: center;
@@ -14,4 +16,15 @@
     text-align: center;
     color: #666;
     line-height: 30px;
+}
+.bei_an{
+    text-align: center;
+    color: #666;
+    margin-top: 5px;
+}
+.footer-img{
+    text-align: center;
+}
+.ha_li_gong{
+
 }

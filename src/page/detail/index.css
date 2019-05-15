@@ -174,6 +174,7 @@
 }
 .comment-btn{
     margin-bottom: 5px;
+    border-radius: 1px;
 }
 .user-comment{
     margin-left: 75px;
@@ -270,4 +271,10 @@
     margin-top: 14px;
     margin-left: 190px;
     border-radius: 10px;
+}
+/*备注*/
+.remarks{
+    color: #fa2a83;
+    margin-top: 21px;
+    margin-left: 10px;
 }

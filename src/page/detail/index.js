@@ -15,6 +15,7 @@ var templateComment = require('./comment.string');
 var page = {
     data : {
         productId : _arvin.getUrlParam('productId') || '',
+        remarks : {},
     },
     init : function(){
         this.onLoad();
@@ -51,9 +52,14 @@ var page = {
         });
         // 加入购物车
         $(document).on('click', '.cart-add', function(){
+            var remarks;
+            this.$remarks     = $('.remarks');
+            remarks = $.trim(this.$remarks.find('#remarks-value').val());
+            console.log(remarks)
             _cart.addToCart({
                 productId   : _this.data.productId,
-                count       : $('.p-count').val()
+                count       : $('.p-count').val(),
+                remarks     : remarks
             }, function(res){
                 window.location.href = './result.html?type=cart-add';
             }, function(errMsg){

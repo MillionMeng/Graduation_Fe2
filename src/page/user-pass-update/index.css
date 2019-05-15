@@ -15,3 +15,17 @@
     width: 200px;
     font-size: 14px;
 }
+.btn-submit{
+    border-radius: 10px;
+    margin-top: 22px;
+    margin-left: 387px;
+}
+#update-pass{
+    color:#fa2a83;
+}
+#update-pass1{
+    color:#fa2a83;
+}
+#update-pass2{
+    color:#fa2a83;
+}

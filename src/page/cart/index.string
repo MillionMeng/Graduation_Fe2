@@ -17,6 +17,7 @@
 			<th class="cart-cell cell-price">单价</th>
 			<th class="cart-cell cell-count">数量</th>
 			<th class="cart-cell cell-total">合计</th>
+			<th class="cart-cell cell-remarks">备注</th>
 			<th class="cart-cell cell-opera">操作</th>
 		</tr>
 	</table>
@@ -50,6 +51,7 @@
 				<span class="count-btn plus">+</span>
 			</td>
 			<td class="cart-cell cell-total">￥{{productTotalPrice}}</td>
+			<td class="cart-cell cell-remarks">{{remarks}}</td>
 			<td class="cart-cell cell-opera">
 				<span class="link cart-delete">删除</span>
 			</td>

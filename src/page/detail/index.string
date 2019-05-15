@@ -28,6 +28,10 @@
 			<span class="p-count-btn plus">+</span>
 			<span class="p-count-btn minus">-</span>
 		</div>
+		<div class="remarks">
+			备注:
+			<input class="remarks-input" id="remarks-value" placeholder="请输入备注信息,颜色、号码等 可不填" style="width: 300px">
+		</div>
 		<div class="p-info-item">
 			<a class="btn cart-add">加入购物车</a>
 		</div>
