@@ -4,6 +4,7 @@
 require('./index.css');
 require('page/common/nav/index.js');
 require('page/common/header/index.js');
+var navSide         = require('page/common/nav-side/index.js');
 var nav             = require('page/common/nav/index.js');
 var _arvin          = require('util/arvin.js');
 var _cart           = require('service/cart-service.js');
@@ -18,6 +19,9 @@ var page = {
         this.bindEvent();
     },
     onLoad : function(){
+        navSide.init({
+            name : 'cart'
+        });
         this.loadCart();
     },
     bindEvent : function(){
@@ -157,7 +161,14 @@ var page = {
         this.data.cartInfo = data;
         //生成HTML
         var cartHTMl = _arvin.renderHtml(templateIndex,data);
-        $('.page-wrap').html(cartHTMl);
+
+
+        /**
+         * 修改的
+         * */
+        $('.panel-body').html(cartHTMl);
+        /*$('.page-wrap').html(cartHTMl);*/
+
         //通知导航的购物车更新数量
         nav.loadCartCount();
     },
