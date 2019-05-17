@@ -2,11 +2,12 @@
 .address-item
 ,.address-add{
     margin:20px 20px 0 0;
-    width:200px;
+    width:800px;
     padding:5px 8px;
     float:left;
     border:3px solid #ccc;
     cursor:pointer;
+    height: 54px;
 }
 .address-item.active{
     border:3px solid #fa2a83;
@@ -31,7 +32,7 @@
     overflow: hidden;
     color:#666;
 }
-.address-item .address-opera{
+/*.address-item*/ .address-opera{
     text-align: right;
     /*display: none;*/
     visibility: hidden;
@@ -145,11 +146,13 @@
 }
 .modal .modal-container .modal-header{
     position: relative;
-    padding: 15px;
-    border-bottom: 1px solid #ccc;
+    padding: 22px;
+    border-bottom: 1px solid black;
+    background: #ffcccc;
 }
 .modal .modal-container .modal-header .modal-title{
     font-size:14px;
+    text-align: center;
 
 }
 .modal .modal-container .modal-header .close{
@@ -162,6 +165,7 @@
 
 .modal .modal-container .modal-body{
     padding: 15px;
+    background: #ffcccc;
 }
 
 /*form部分*/
@@ -196,4 +200,57 @@
     height: 30px;
     line-height:30px;
     font-size:13px;
+}
+
+.panel-title-pay{
+    margin-left: 492px;
+    font-size: 14px;
+    color: #666;
+}
+.pay-arvin{
+    margin-top: 12px;
+    margin-left: 502px;
+}
+
+.add-address-div{
+    width: 66px;
+    height: 19px;
+    float: right;
+    margin-right: 1px;
+    font-size: 12px;
+    background: #ffcccc;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* keywords-list */
+.keywords-list{
+    margin-top: -100px;
+    margin-left: 220px;
+    position: absolute;
+    top: 313px;
+    float: left;
+    width: 210px;
+    height: 350px;
+    padding: 10px 0;
+    /*margin-right: 10px;*/
+    background: #fa2a83;
+    color: #fff;
+    z-index: 100;
+}
+.keywords-list .keywords-item{
+    padding-left: 10px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+}
+.keywords-list .keywords-item:hover{
+    background: #999;
+}
+.keywords-list .keywords-item .link{
+    margin-right: 6px;
+    color: #fff;
+}
+.keywords-list .keywords-item .link:hover{
+    color: #c60023;
 }

@@ -38,6 +38,20 @@ var page = {
                 formError.show(errMsg);
             });
         });
+        $('#email').blur(function () {
+            var email = $.trim($(this).val());
+            console.log(email);
+            //如果邮箱为空，不做验证
+            if(!email){
+                return;
+            }
+            //异步验证邮箱是否存在
+            _user.checkEmail(email,function (res) {
+                formError.hide();
+            },function (errMsg) {
+                formError.show(errMsg);
+            });
+        });
         //注册按钮的点击
         $('#submit').click(function () {
             _this.submit();

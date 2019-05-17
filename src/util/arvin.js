@@ -43,8 +43,8 @@ var _arvin = {
     //获取url参数
     getUrlParam : function (name) {
         var reg     = new RegExp('(^|&)' + name + '=([^&]*)(&|$)');//正则表达式
-        var result  = window.location.search.substr(1).match(reg);
-        return result ? decodeURIComponent(result[2]) : null;
+        var result  = window.location.search.substr(1).match(reg);//window.location.search问号里的参数 substr(1)问号去掉
+        return result ? decodeURIComponent(result[2]) : null;//如果有参数 result是一个数组 没有就是null  decodeURIComponent做一个解码
     },
     //渲染html模板
     renderHtml : function(htmlTemplate, data){

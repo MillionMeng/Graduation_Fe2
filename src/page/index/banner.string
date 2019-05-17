@@ -2,34 +2,34 @@
 	<ul>
 		<li>
 			<a href="./list.html?categoryId=139" target="_blank">
-				<img class="banner-img" src="../../image/banner/banner007.jpg" />
+				<img class="banner-img" src="../../image/banner/新轮播图001.jpg" />
 			</a>
 		</li>
 		<li>
             <a href="./list.html?categoryId=100030" target="_blank">
-                <img class="banner-img" src="../../image/banner/index_backgroud002.jpg" />
+                <img class="banner-img" src="../../image/banner/新轮播图002.jpg" />
             </a>
         </li>
         <li>
             <a href="./list.html?categoryId=100016" target="_blank">
-                <img class="banner-img" src="../../image/banner/banner0006.jpg" />
+                <img class="banner-img" src="../../image/banner/新轮播图003.jpg" />
             </a>
         </li>
         <li>
             <a href="./list.html?categoryId=100001" target="_blank">
-                <img class="banner-img" src="../../image/banner/banner0003.jpg" />
+                <img class="banner-img" src="../../image/banner/新轮播图004.jpg" />
             </a>
         </li>
         <li>
             <a href="./list.html?categoryId=100021" target="_blank">
-                <img class="banner-img" src="../../image/banner/banner0004.jpg" />
+                <img class="banner-img" src="../../image/banner/新轮播图005.jpg" />
             </a>
         </li>
 
 	</ul>
-	<div class="banner-arrow prev">
+	<!--<div class="banner-arrow prev">
 		<i class="fa fa-angle-double-left"></i>
-	</div>
+	</div>-->
 	<div class="banner-arrow next">
 		<i class="fa fa-angle-double-right"></i>
 	</div>

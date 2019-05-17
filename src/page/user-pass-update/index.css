@@ -2,7 +2,8 @@
     height: 30px;
     line-height: 30px;
     font-size: 14px;
-    margin-top: 10px;
+    margin-top: 31px;
+    margin-left: 319px;
 }
 .form-line .label{
     display: inline-block;
@@ -17,8 +18,8 @@
 }
 .btn-submit{
     border-radius: 10px;
-    margin-top: 22px;
-    margin-left: 387px;
+    margin-top: 100px;
+    margin-left: 400px;
 }
 #update-pass{
     color:#fa2a83;

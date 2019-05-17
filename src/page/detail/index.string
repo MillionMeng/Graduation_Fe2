@@ -19,8 +19,10 @@
 			<span class="info">￥{{price}}</span>
 		</div>
 		<div class="p-info-item">
-			<span class="label">库存:</span>
-			<span class="info">{{stock}}</span>
+			<!--<span class="label">库存:</span>
+			<span class="info">{{stock}}</span>-->
+			<span class="label">运费:</span>
+			<span class="info">包邮</span>
 		</div>
 		<div class="p-info-item p-count-con">
 			<span class="label">数量:</span>
@@ -34,6 +36,7 @@
 		</div>
 		<div class="p-info-item">
 			<a class="btn cart-add">加入购物车</a>
+			<a class="btn collect-add">收&nbsp;&nbsp;藏</a>
 		</div>
 	</div>
 </div>

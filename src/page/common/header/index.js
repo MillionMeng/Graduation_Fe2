@@ -20,6 +20,18 @@ var header = {
 
     bindEvent : function(){
         var _this = this;
+        $('.arvin_fen_class').on('mouseenter',function () {
+            $('.keywords-list')[0].style.visibility = 'visible';
+        });
+        $('.arvin_fen_class').on('mouseout',function () {
+            $('.keywords-list')[0].style.visibility = 'hidden';
+        });
+        $('.keywords-list').on('mouseenter', function () {
+            $('.keywords-list')[0].style.visibility = 'visible';
+        })
+        $('.keywords-list').on('mouseleave',function () {
+            $('.keywords-list')[0].style.visibility = 'hidden';
+        });
         //点击搜索按钮以后，做搜索提交
         $('#search-bin').click(function () {
             _this.searchSubmit();

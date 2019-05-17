@@ -5,17 +5,29 @@
     min-height: 100px;
 }
 .nav-side .nav-item{
-    line-height: 25px;
+    line-height: 37px;
     font-size: 13px;
+    border: 1px solid #eee;
+    background: #fa2a;
 }
 .nav-side .nav-item .link{
     color: #888;
+    margin-left: 35px;
+
 }
 .nav-side .nav-item.active .link{
-    color: #c60023;
+    color: #fa2a83;
+    margin-left: 35px;
+
 }
 /*右侧内容区*/
 .content.with-nav{
     float: left;
     width:950px;
+}
+.side-arvin{
+    border: 1px;
+    background: #eee;
+    font-size: 20px;
+    text-align: center;
 }

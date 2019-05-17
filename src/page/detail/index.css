@@ -278,3 +278,45 @@
     margin-top: 21px;
     margin-left: 10px;
 }
+
+
+/**
+收藏
+ */
+
+.collect-add{
+    margin-left: 10px;
+}
+
+
+/* keywords-list */
+.keywords-list{
+    margin-top: -100px;
+    margin-left: 220px;
+    position: absolute;
+    top: 313px;
+    float: left;
+    width: 210px;
+    height: 350px;
+    padding: 10px 0;
+    /*margin-right: 10px;*/
+    background: #fa2a83;
+    color: #fff;
+    z-index: 100;
+}
+.keywords-list .keywords-item{
+    padding-left: 10px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+}
+.keywords-list .keywords-item:hover{
+    background: #999;
+}
+.keywords-list .keywords-item .link{
+    margin-right: 6px;
+    color: #fff;
+}
+.keywords-list .keywords-item .link:hover{
+    color: #c60023;
+}

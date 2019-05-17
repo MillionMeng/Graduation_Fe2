@@ -28,6 +28,9 @@ $(function () {
 
 
     var bannerHtml  = _arvin.renderHtml(templateBanner);
+    /**
+     * 这
+     */
     $('.banner-con').html(bannerHtml);
     //初始化banner
     var $slider     = $('.banner').unslider({

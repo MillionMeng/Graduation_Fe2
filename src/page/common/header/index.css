@@ -76,6 +76,7 @@
     line-height: 33px;
     border-top-right-radius: 35px;
     border-bottom-right-radius: 35px;
+    margin-right: 53px;
 }
 
 /* 面包屑导航 */
@@ -96,8 +97,8 @@
     /* float: left;*/
     text-align: center;
     font-weight: bold;
-    font-size: 20px;
-    width: 240px;
+    font-size: 21px;
+    width: 210px;
     float: left;
     height: 36px;
     color: #fff;
@@ -137,4 +138,46 @@
     font-weight: bold;
     color:black;
     margin-bottom: 3px;
+}
+
+
+.cart-index{
+    /*float: right;
+    position: relative;
+    margin-top: 19px;
+    z-index: 3;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    padding: 0 20px;*/
+    float: right;
+    position: relative;
+    margin-top: 3px;
+    z-index: 3;
+    /*border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;*/
+    padding: 0 20px;
+    display: inline-block;
+    padding: 0 20px;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    border: none;
+   /* background: #fa2a83;*/
+    font-size: 17px;
+    font-weight: bold;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 15px;
+    border:1px solid #fa2a;
+}
+
+
+.cart-button{
+    background: #fa2a83;
+}
+#cart-a{
+    color: black;
+
 }

@@ -21,9 +21,24 @@ var _user = {
         _arvin.request({
             url     : _arvin.getServerUrl('/user/check'),
             data    : {
-                type    : 'username',
+                type    : 'user',
                 str     :  username
             },
+            contentType    :'application/x-www-form-urlencoded',
+            method  : 'POST',
+            success : resolve,
+            error   : reject
+        });
+    },
+    // 检查用户名
+    checkEmail : function(email, resolve, reject){
+        _arvin.request({
+            url     : _arvin.getServerUrl('/user/check'),
+            data    : {
+                type    : 'email',
+                str     :  email
+            },
+            contentType    :'application/x-www-form-urlencoded',
             method  : 'POST',
             success : resolve,
             error   : reject

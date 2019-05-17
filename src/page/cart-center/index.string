@@ -1,6 +1,7 @@
 {{#notEmpty}}
 <div class="cart-header">
 	<table class="cart-table">
+		<br/>
 		<tr>
 			<th class="cart-cell cell-check">
 				<label class="cart-label">
@@ -71,16 +72,16 @@
 			<span>全选</span>
 		</label>
 	</div>
-	<div class="delete-con">
+	<!--<div class="delete-con">
         <span class="link delete-selected">
             <i class="fa fa-trash-o"></i>
             <span>删除选中</span>
         </span>
-	</div>
+	</div>-->
 	<div class="submit-con">
 		<span>总价：</span>
 		<span class="submit-total">￥{{cartTotalPrice}}</span>
-		<span class="btn btn-submit">去结算</span>
+		<span class="btn btn-submit">结算</span>
 	</div>
 </div>
 {{/notEmpty}}

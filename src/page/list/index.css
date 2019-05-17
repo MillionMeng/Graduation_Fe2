@@ -1,5 +1,9 @@
 .sort-con{
     overflow: auto;
+    border: 1px solid #ffcccc;
+    /*color: black;*/
+    background-color: white;
+    align-content: center;
 }
 .sort-con .sort-item{
     float: left;
@@ -15,9 +19,10 @@
     cursor: pointer;
 }
 .sort-con .sort-item.active{
-    background: #fa2a83;
-    border: 1px solid #c60023;
-    color: #fff;
+    background: white;
+    /*border: 1px solid #c60023;*/
+    color: black;
+    margin-left: 10px;
 }
 .sort-con .sort-item .fa-sort-desc{
     position: absolute;
@@ -31,6 +36,14 @@
     opacity: .6;
 }
 
+.slh_label{
+    overflow: auto;
+    float: left;
+    font-size: 13px;
+    line-height: 27px;
+    text-align: center;
+}
+
 /* 列表 */
 .p-list-con{
     margin-top: 15px;
@@ -39,15 +52,15 @@
 }
 .p-list-con .p-item{
     position: relative;
-    width: 180px;
+    width: 230px;
     float: left;
     padding: 10px;
     margin: 0 20px 20px 0;
     background: #fff;
 }
 .p-list-con .p-item .p-img-con{
-    width: 180px;
-    height: 200px;
+    width: 220px;
+    height: 230px;
 }
 .p-list-con .p-item .p-img-con .p-img{
     width: 100%;
@@ -75,9 +88,40 @@
 .err-tip{
     height: 60px;
     line-height: 60px;
-    color: #f60;
+    color: #fa2a83;
     font-size: 16px;
     font-weight: bold;
     text-align: center;
     background: #eee;
+}
+/* keywords-list */
+.keywords-list{
+    margin-top: -100px;
+    margin-left: 220px;
+    position: absolute;
+    top: 313px;
+    float: left;
+    width: 210px;
+    height: 350px;
+    padding: 10px 0;
+    /*margin-right: 10px;*/
+    background: #fa2a83;
+    color: #fff;
+    z-index: 100;
+}
+.keywords-list .keywords-item{
+    padding-left: 10px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 14px;
+}
+.keywords-list .keywords-item:hover{
+    background: #999;
+}
+.keywords-list .keywords-item .link{
+    margin-right: 6px;
+    color: #fff;
+}
+.keywords-list .keywords-item .link:hover{
+    color: #c60023;
 }

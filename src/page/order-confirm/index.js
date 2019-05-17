@@ -23,7 +23,7 @@ var page = {
     },
     bindEvent : function(){
         var _this = this;
-        //地质的选择
+        //地址的选择
         //选中当前的 把其他选中的边框去掉的清掉
         $(document).on('click','.address-item',function () {
             $(this).addClass('active').siblings('.address-item').removeClass('active');
@@ -51,7 +51,7 @@ var page = {
             }
         });
         //新建地址
-        $(document).on('click','.address-add',function () {
+        $(document).on('click','.add-address-div',function () {
             addressModal.show({
                 isUpdate : false,
                 onSuccess : function () {

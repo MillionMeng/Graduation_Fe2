@@ -8,6 +8,7 @@ var _arvin          = require('util/arvin.js');
 var _product        = require('service/product-service.js');
 var _comment        = require('service/comment-service.js');
 var _cart           = require('service/cart-service.js');
+var _collect        = require('service/collect-service.js');
 var commentModal    = require('./comment-modal.js');
 var templateIndex   = require('./index.string');
 var templateComment = require('./comment.string');
@@ -65,6 +66,16 @@ var page = {
             }, function(errMsg){
                 _arvin.errorTips(errMsg);
             });
+        });
+        //收藏商品
+        $(document).on('click', '.collect-add', function(){
+                _collect.addCollectProduct({
+                    productId   : _this.data.productId
+                },function (res) {
+                    _arvin.successTips(res);
+                },function (errMsg) {
+                    _arvin.errorTips(errMsg);
+                })
         });
 
         //写评论(添加评论)

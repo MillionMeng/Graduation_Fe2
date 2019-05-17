@@ -1,14 +1,18 @@
 /*最外层容器*/
 .page-wrap{
     padding: 40px 0;
-    background: #fa2a83;
+    background: url("../../image/背景图005.jpg");
+    background-size: 90% 110%;
+    height: 430px;
 }
 /*用户登录框*/
 .user-con{
     position: relative;
-    margin: 0 auto;
+   /* margin: 0 auto;*/
     width: 400px;
     background: #fff;
+    margin-left: 648px;
+    margin-top: 50px;
 }
 .user-con .user-title{
     text-align:center;
@@ -17,10 +21,12 @@
     font-size:18px;
     font-weight: bold;
     color: #666;
+    background: white;
 }
 /*内容区*/
 .user-con .user-box{
     padding: 20px;
+    background: white;
 }
 /*错误提示框*/
 .user-con .user-box .error-item{
@@ -28,7 +34,7 @@
     padding: 4px 0 4px 40px;
     margin-bottom: 10px;
     border:1px solid red;
-    color: red;
+    color: #fa2a83;
     background: #fde9e9;
     display: none;
 }
@@ -72,6 +78,7 @@
     padding: 6px 0;
     text-align: center;
     font-size: 20px;
+    background: #ffcccc;
 }
 /*跳转链接*/
 .user-con .link-item{

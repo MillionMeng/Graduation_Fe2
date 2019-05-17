@@ -102,6 +102,8 @@
     position: relative;
     padding: 15px;
     border-bottom: 1px solid #ccc;
+    text-align: center;
+    background: #ffcccc;
 }
 .modal .modal-container .modal-header .modal-title{
     font-size:14px;
@@ -117,6 +119,7 @@
 
 .modal .modal-container .modal-body{
     padding: 15px;
+    background: #ffcccc;
 }
 
 /*form部分*/

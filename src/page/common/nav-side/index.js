@@ -9,12 +9,13 @@ var navSide = {
     option : {
         name : '',
         navList : [
-            {name: 'user-center',  desc: '个人中心'    ,href :'./user-center.html'},
-            {name: 'user-address',  desc: '收货地址'    ,href :'./address.html'},
-            {name: 'cart',  desc: '我的购物车'    ,href :'./cart.html'},
-            {name: 'order-list',   desc: '我的订单'    ,href :'./order-list.html'},
+            {name: 'user-center',       desc: '个人中心'    ,href :'./user-center.html'},
+            {name: 'user-address',      desc: '收货地址'    ,href :'./address.html'},
+            {name: 'collect',           desc: '我的收藏'    ,href :'./collect.html'},
+            {name: 'cart',              desc: '我的购物车'  ,href :'./cart.html'},
+            {name: 'order-list',        desc: '我的订单'    ,href :'./order-list.html'},
             {name: 'user-pass-update',  desc: '修改密码'    ,href :'./user-pass-update.html'},
-            {name: 'about',        desc: '关于IBuy'   ,href :'./about.html'}
+            {name: 'about',             desc: '关于IBuy'    ,href :'./about.html'}
         ]
     },
     init : function(option){
